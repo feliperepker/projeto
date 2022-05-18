@@ -1,0 +1,49 @@
+#section-four{
+    font-family: 'Montserrat';
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    p{
+        text-align: center;
+        padding: 40px 0px;
+        width: 150vh;
+        color: #595959;
+    }
+}
+
+.icone-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    div{
+        width: 35vh;
+        margin: 3vh;
+        display: flex;
+        flex-direction: column;
+        align-content: left;
+        
+
+        h3{
+            margin-top: 4vh;
+            text-align: left;
+            margin-left: 5vh;
+        }
+
+        p{
+           text-align: left !important;
+            width: 90% !important;
+            font-size: 2.2vh;
+            margin-left: 5vh;
+        }
+        i{  
+            display: block;
+            position: relative;
+            right: 12px;
+            top: 30px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@media (prefers-color-scheme: dark){
+ section{
+     background-color: rgb(59, 58, 58);
+     color: white;
+     p{
+         color: white !important;
+     }
+     button{
+        background-color: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.541) !important;
+     }
+ }
+ body{
+     background-color: rgb(59, 58, 58);
+ }
+ header{
+     background-color:rgb(59, 58, 58) ;
+     
+     color: white;
+
+     a{
+         color: white;
+     }
+
+     .logo-container{
+         color: white;
+     }
+ }
+
+}
+.line{
+    background-color: rgba(255, 255, 255, 0.575);
+}
+
+#circle{
+    background-color: #5e9fee !important;
+}
+
