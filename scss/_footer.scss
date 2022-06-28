@@ -13,6 +13,7 @@ footer{
         background-color: transparent;
         color: white;
         padding-right: 30px;
+        
 
     }
 
@@ -37,5 +38,13 @@ footer{
         width: 12px;
         height: 5px;
         margin: 0 5px;
+    }
+}
+
+@media (max-width: 1000px) {
+    footer{
+        p{
+            font-size: 2vw;
+        }
     }
 }

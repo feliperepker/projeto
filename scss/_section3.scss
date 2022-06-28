@@ -24,7 +24,7 @@
         z-index: 1;
         text-align: center;
         padding: 40px 0px;
-        width: 150vh;
+        width: 80%;
         color: #595959;
         background-color: transparent;
     }
@@ -70,3 +70,24 @@
     }
     }
     
+
+    @media (max-width: 1200px){
+        .display-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            .display-item{
+                margin: 2vh;
+                padding: 2vw;
+            }
+        }
+    }
+
+    @media (max-width: 500px){
+        .display-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }

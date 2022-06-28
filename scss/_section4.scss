@@ -9,7 +9,7 @@
     p{
         text-align: center;
         padding: 40px 0px;
-        width: 150vh;
+        width: 80%;
         color: #595959;
     }
 }
@@ -45,5 +45,23 @@
             right: 12px;
             top: 30px;
         }
+    }
+}
+@media (max-width: 800px){
+    .icone-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        div{
+            margin: 1vh;
+        }
+    }
+    i{
+        top: 60px;
+        right: 8px;
+    }
+}
+@media (max-width: 350px){
+    i{
+        opacity: 0;
     }
 }

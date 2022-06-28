@@ -22,15 +22,15 @@
     p{
         text-align: center;
         padding: 40px 0px;
-        width: 150vh;
+        width: 80vw;
         color: #595959;
     }
 }
 
 .provisorio{
     z-index: 1;
-    height: 400px;
-    width: 800px;
+    height: 30%;
+    width: 70%;
     background-color: rgb(177, 175, 175);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
 }
@@ -40,4 +40,13 @@
     height: 3px;
     background-color: rgba(0, 0, 0, 0.865);
     margin-top: 15vh;
+}
+
+@media (max-width: 600px) {
+    .provisorio{
+        height: 50vw;
+    }
+    #circle{
+        margin-top: 150px;
+    }
 }

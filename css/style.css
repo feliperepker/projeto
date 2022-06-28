@@ -5,7 +5,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 a {
@@ -20,6 +20,7 @@ header {
   width: 100%;
   height: 70px;
   align-items: center;
+  justify-content: space-between;
 }
 header .logo-container {
   display: flex;
@@ -44,21 +45,84 @@ header ul {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 11px;
-  justify-content: space-between;
-  width: 50%;
 }
 header ul li {
-  font-size: 1.5vh;
+  font-size: 1em;
   list-style-type: none;
   border-bottom: 2px solid transparent;
   padding-bottom: 8px;
   transition: 0.5s;
+  margin: 5vw;
 }
 header ul li:hover {
   border-bottom: 2px solid rgba(28, 125, 244, 0.8078431373);
 }
 
+@media (max-width: 800px) {
+  header {
+    position: fixed;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header ul {
+    display: none;
+  }
+  header .one, header .two, header .three {
+    background-color: #2e2e2e;
+    height: 2px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+  }
+  header .menu-toggle {
+    width: 40px;
+    margin-right: 20px;
+  }
+  header .menu-section.on {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e6e6e6;
+    width: 80vw;
+    height: 60vh;
+  }
+  header .menu-section.on ul {
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  header .menu-section.on ul a {
+    transition-duration: 0.5s;
+    font-size: 1.4rem;
+    height: 3rem;
+    margin: 10px;
+  }
+  header .menu-section.on ul a :hover {
+    color: white;
+    border-bottom: 0 solid transparent;
+  }
+  header .menu-section.on .menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 15;
+    margin-top: 17px;
+    margin-right: 40px;
+  }
+  header .menu-section.on .menu-toggle .one {
+    transform: rotate(45deg) translate(7px, 7px);
+    height: 2px;
+  }
+  header .menu-section.on .menu-toggle .two {
+    opacity: 0;
+  }
+  header .menu-section.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(5px, -5px);
+    height: 2px;
+  }
+}
 footer {
   margin-top: 5vh;
   background-color: #1a1a1a;
@@ -97,6 +161,11 @@ footer .div-logo {
   margin: 0 5px;
 }
 
+@media (max-width: 1000px) {
+  footer p {
+    font-size: 2vw;
+  }
+}
 #section-first {
   display: flex;
   flex-direction: row;
@@ -106,17 +175,17 @@ footer .div-logo {
 }
 #section-first img {
   width: auto;
-  max-width: 90vh;
-  padding-left: 20vh;
+  max-width: 90vw;
+  padding-left: 300px;
 }
 #section-first h1 {
-  width: 10vh;
+  width: 10vw;
   padding: 5px;
-  font-size: 7vh;
+  font-size: 4vw;
 }
 #section-first p {
   padding-top: 10px;
-  width: 50vh;
+  width: 25vw;
   color: #595959;
   text-align: left;
 }
@@ -137,6 +206,64 @@ footer .div-logo {
   border: 1px solid white;
 }
 
+@media (max-width: 1500px) {
+  #section-first img {
+    width: 50%;
+    padding-left: 10vw;
+  }
+}
+@media (max-width: 800px) and (min-width: 600px) {
+  #section-first {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #section-first img {
+    margin: auto;
+    margin-top: 40px;
+  }
+  #section-first h1 {
+    font-size: 2em;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #section-first p {
+    width: 70%;
+    font-size: 1em;
+    margin: auto;
+  }
+  #section-first button {
+    margin-left: 15vw;
+  }
+}
+@media (max-width: 600px) {
+  #section-first {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #section-first img {
+    margin: auto;
+    margin-top: 40px;
+  }
+  #section-first h1 {
+    font-size: 2em;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #section-first p {
+    text-align: center;
+    width: 70%;
+    font-size: 1em;
+    margin: auto;
+  }
+  #section-first button {
+    margin-left: auto;
+  }
+}
 #section-two {
   font-family: "Montserrat";
   font-style: normal;
@@ -161,14 +288,14 @@ footer .div-logo {
 #section-two p {
   text-align: center;
   padding: 40px 0px;
-  width: 150vh;
+  width: 80vw;
   color: #595959;
 }
 
 .provisorio {
   z-index: 1;
-  height: 400px;
-  width: 800px;
+  height: 30%;
+  width: 70%;
   background-color: rgb(177, 175, 175);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
 }
@@ -180,6 +307,15 @@ footer .div-logo {
   margin-top: 15vh;
 }
 
+@media (max-width: 600px) {
+  .provisorio {
+    height: 50vw;
+  }
+
+  #circle {
+    margin-top: 150px;
+  }
+}
 .section-three {
   margin-top: 9vh;
   display: flex;
@@ -205,7 +341,7 @@ footer .div-logo {
   z-index: 1;
   text-align: center;
   padding: 40px 0px;
-  width: 150vh;
+  width: 80%;
   color: #595959;
   background-color: transparent;
 }
@@ -249,6 +385,24 @@ footer .div-logo {
   transform: scale(1.06);
 }
 
+@media (max-width: 1200px) {
+  .display-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .display-container .display-item {
+    margin: 2vh;
+    padding: 2vw;
+  }
+}
+@media (max-width: 500px) {
+  .display-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
 #section-four {
   font-family: "Montserrat";
   font-style: normal;
@@ -261,7 +415,7 @@ footer .div-logo {
 #section-four p {
   text-align: center;
   padding: 40px 0px;
-  width: 150vh;
+  width: 80%;
   color: #595959;
 }
 
@@ -295,6 +449,25 @@ footer .div-logo {
   top: 30px;
 }
 
+@media (max-width: 800px) {
+  .icone-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .icone-container div {
+    margin: 1vh;
+  }
+
+  i {
+    top: 60px;
+    right: 8px;
+  }
+}
+@media (max-width: 350px) {
+  i {
+    opacity: 0;
+  }
+}
 @media (prefers-color-scheme: dark) {
   section {
     background-color: rgb(59, 58, 58);
@@ -321,6 +494,14 @@ footer .div-logo {
   }
   header .logo-container {
     color: white;
+  }
+
+  .one, .two, .three {
+    background-color: rgb(253, 253, 253) !important;
+  }
+
+  .menu-section.on {
+    background-color: rgb(24, 24, 24) !important;
   }
 }
 .line {

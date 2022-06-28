@@ -27,6 +27,14 @@
      }
  }
 
+    .one, .two, .three{
+        background-color: rgb(253, 253, 253) !important;
+    }
+    .menu-section.on{
+        background-color: rgb(24, 24, 24) !important;
+    }
+ 
+
 }
 .line{
     background-color: rgba(255, 255, 255, 0.575);
