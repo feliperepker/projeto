@@ -17,6 +17,7 @@ a{
 @import 'section4';
 @import 'dark';
 
-body{
-    overflow-x: hidden !important;
+.wrapper{
+    overflow-x: hidden ;
+    position: relative;
 }

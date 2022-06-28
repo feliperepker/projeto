@@ -84,10 +84,17 @@
         }
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 800px){
         .display-container{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+    @media (max-width: 500px){
+        .display-container{
+            display: grid;
+            grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
         }
     }

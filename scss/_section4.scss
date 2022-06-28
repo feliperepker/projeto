@@ -59,9 +59,17 @@
         top: 60px;
         right: 8px;
     }
-}
-@media (max-width: 350px){
-    i{
+
+
+ .line{
         opacity: 0;
     }
+    
+}   
+@media (max-width: 500px){
+    .icone-container{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+    }
+   
 }

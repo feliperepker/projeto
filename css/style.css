@@ -4,10 +4,6 @@
   padding: 0;
 }
 
-body {
-  overflow-x: hidden !important;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -246,7 +242,7 @@ footer .div-logo {
   }
   #section-first img {
     margin: auto;
-    margin-top: 40px;
+    margin-top: 60px;
   }
   #section-first h1 {
     font-size: 2em;
@@ -288,16 +284,9 @@ footer .div-logo {
 #section-two p {
   text-align: center;
   padding: 40px 0px;
-  width: 80vw;
+  width: 60vw;
   color: #595959;
-}
-
-.provisorio {
-  z-index: 1;
-  height: 30%;
-  width: 70%;
-  background-color: rgb(177, 175, 175);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+  z-index: 2;
 }
 
 .line {
@@ -314,6 +303,7 @@ footer .div-logo {
 
   #circle {
     margin-top: 150px;
+    opacity: 0.1;
   }
 }
 .section-three {
@@ -396,10 +386,17 @@ footer .div-logo {
     padding: 2vw;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .display-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .display-container {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
 }
@@ -462,10 +459,15 @@ footer .div-logo {
     top: 60px;
     right: 8px;
   }
-}
-@media (max-width: 350px) {
-  i {
+
+  .line {
     opacity: 0;
+  }
+}
+@media (max-width: 500px) {
+  .icone-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -510,6 +512,11 @@ footer .div-logo {
 
 #circle {
   background-color: #5e9fee !important;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
